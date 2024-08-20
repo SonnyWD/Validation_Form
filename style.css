@@ -1,0 +1,134 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to right, #d9a7c7, #fffcdc);
+  font-family: Roboto, Helvetica, sans-serif;
+  padding: clamp(20px, 5vw, 50px) 10px;
+}
+.container {
+  max-width: 600px;
+  background-color: #222;
+  margin: 1rem auto;
+  color: #f1f1f1;
+  padding: 2rem;
+  border-radius: 5px;
+}
+.container.shake {
+  animation: shake 0.4s ease-out;
+}
+@keyframes shake {
+  33% {
+    transform: translateX(-5px);
+  }
+  66% {
+    transform: translateX(5px);
+  }
+}
+h1 {
+  text-align: center;
+}
+.group-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-block: 2rem;
+}
+.group-inputs input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #858585;
+  outline: 0;
+  padding: 10px 0;
+  color: #f1f1f1;
+  font-size: 16px;
+}
+.group-inputs input::placeholder {
+  font-size: 16px;
+  margin-block: 1rem;
+  color: #858585;
+}
+input:focus {
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+}
+.group-inputs label {
+  font-size: 20px;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+.information-password {
+  margin-top: 0.7rem;
+  color: #858585;
+}
+button {
+  padding: 15px 10px;
+  min-width: 200px;
+  font-size: 18px;
+  background-color: #fffab2;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+  margin-block: 2rem 1rem;
+  cursor: pointer;
+  text-align: center;
+  font-family: Raleway;
+  font-weight: 500;
+}
+button:hover {
+  background-color: #fff870;
+}
+.error-msg {
+  margin-block-start: 0.7rem;
+  color: #e22020;
+}
+input[title=""] {
+  display: none;
+}
+.error-invalid-password {
+  margin: 0;
+}
+.container-blocs-mdp {
+  width: 100%;
+  height: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+.red-bloc,
+.orange-bloc,
+.green-bloc {
+  height: 100%;
+}
+.red-bloc {
+  background-color: #eb1818;
+}
+.orange-bloc {
+  background-color: #eb7718;
+}
+.green-bloc {
+  background-color: #0cac0c;
+}
+.input-group-img {
+  position: relative;
+}
+img.img-validation {
+  width: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+input#name,
+input#email,
+input#password,
+input#confirm-password {
+  width: 100%;
+}

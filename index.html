@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Inscrivez-vous.</h1>
+
+      <form action="">
+        <div class="group-inputs">
+          <label for="name">Nom d'utilisateur </label>
+          <div class="input-group-img">
+            <input
+              type="text"
+              id="name"
+              placeholder="3 caractères minimum"
+              data-input-id="name"
+              maxlength="24"
+            />
+            <img src="ressources/check.svg" alt="" class="img-validation one" />
+          </div>
+          <span class="error-msg" id="error-name"></span>
+        </div>
+
+        <div class="group-inputs">
+          <label for="email">Entrez votre email</label>
+          <div class="input-group-img">
+            <input
+              type="text"
+              id="email"
+              placeholder="test@test.fr"
+              autocomplete="off"
+            />
+            <img src="ressources/check.svg" alt="" class="img-validation two" />
+          </div>
+          <span class="error-msg" id="error-email"></span>
+        </div>
+
+        <div class="group-inputs">
+          <label for="password">Mot de passe</label>
+
+          <div class="input-group-img">
+            <input
+              type="password"
+              id="password"
+              placeholder="Votre mot de passe"
+            />
+            <img
+              src="ressources/check.svg"
+              alt=""
+              class="img-validation three"
+            />
+          </div>
+          <span class="information-password"
+            >Au moins un symbole, un chiffre, ainsi que 6 caractères
+            minimum.</span
+          >
+          <div class="container-blocs-mdp">
+            <div class="red-bloc active"></div>
+            <div class="orange-bloc active"></div>
+            <div class="green-bloc active"></div>
+          </div>
+
+          <!-- <span class="error-invalid-password error-msg"></span> -->
+        </div>
+
+        <div class="group-inputs">
+          <label for="confirm-password">Confirmez le mot de passe</label>
+
+          <div class="input-group-img">
+            <input
+              type="password"
+              id="confirm-password"
+              placeholder="Confirmez le mot de passe"
+            />
+            <img
+              src="ressources/check.svg"
+              alt=""
+              class="img-validation four"
+            />
+          </div>
+          <span class="error-msg" id="error-confirm-password"></span>
+        </div>
+        <button type="submit">Création du compte</button>
+      </form>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
